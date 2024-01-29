@@ -1,19 +1,42 @@
+/* Cambio del modelo de caja */
 *{
     box-sizing: border-box;
 }
 
+/*Maquetación de la página*/
+
 body{
+    display: grid;
     margin: 0;
-    overflow: hidden;
+    
 
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    
+    overflow-x: hidden;
 }
-
+/* Variables de la página */
 :root{
     --menu-color:#2a4dbd;
     --accesibilidad-menu:#fff;
     --accesibilidad-menu-hover:aqua;
     --link-menu-color:#fff9;
+
+    --fondo:#fff;
 }
+
+/*Elementos maquetados*/
+
+.main{
+    margin: 0 2em;
+    background-color: var(--fondo);
+}
+
+.footer{
+    background-color: bisque;
+    
+}
+
 /*Control del desbordamiento de imagenes y reseteo de links*/
 .img{
     max-width: 100%;
@@ -114,6 +137,61 @@ body{
     }
 }
 
+.container{
+    display: grid;
+    grid-template-columns: 85% 15%;
+}
+/*Carrusel*/
+.carrusel{
+    position: relative;
+    
+
+    width: auto;
+    height: 360px;
+
+    margin: 2em;
+
+    border: solid 1px #333;
+}
+/*Parte del Main*/
+
+/*Parte del menu de navegación del Main*/
+
+/* requiere cambio */
+.nav{
+    
+    position: absolute;
+    margin-top: 2em; 
+    right: 0;
+    width: 200px;
+    height: auto;
+
+    text-align: center;
+    border: #333 solid 1px;
+    
+}
+.nav__item{
+    list-style: none;
+    
+}
+ .hr{
+    width: 95%;
+    margin-top: 2em;
+    
+    border: solid 4px #2f4982;
+ }
+ .container-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+}
+ .section{
+    width: 250px;
+    height: 200px;
+    border: solid 1px #000;
+ }
 /*Control de hover en dispositivos táctiles*/
 
 @media(hover:hover){
